@@ -389,26 +389,152 @@
       "supportsExternalPlayer": true
     },
     {
-      "id": "iracemaflix-backend",
-      "name": "IracemaFlix — Backend completo",
-      "description": "Ponte para todos os provedores do addon IracemaFlix: Kamirama, MegaEmbed, Mgeb, MyEmbed, PlayerFlix, RedeFlix, Xtream e M3U.",
+      "id": "iracemaflix-live",
+      "name": "IracemaFlix — Canais, M3U e Xtream",
+      "description": "Canais públicos, M3U e Xtream como provider Nuvio, com configurações locais e sem credenciais no repositório.",
       "version": "0.1.0",
-      "filename": "providers/iracemaflix-backend.js",
+      "filename": "providers/iracemaflix-live.js",
+      "supportedTypes": [
+        "tv"
+      ],
+      "enabled": true,
+      "contentLanguage": [
+        "pt-BR"
+      ],
+      "formats": [
+        "hls",
+        "mp4",
+        "iframe"
+      ],
+      "hasSettings": true,
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "xtream",
+      "name": "IracemaFlix — Xtream",
+      "description": "Canais ao vivo, filmes e séries Xtream com credenciais configuradas nas preferências do Nuvio.",
+      "version": "0.1.0",
+      "filename": "providers/xtream.js",
       "supportedTypes": [
         "movie",
         "tv"
       ],
       "enabled": true,
       "contentLanguage": [
-        "pt-BR",
-        "ja",
-        "en"
+        "pt-BR"
       ],
       "formats": [
         "hls",
         "mp4"
       ],
       "hasSettings": true,
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "mgeb",
+      "name": "Mgeb",
+      "description": "Filmes e séries via Mgeb.",
+      "version": "0.1.0",
+      "filename": "providers/mgeb.js",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "enabled": true,
+      "contentLanguage": [
+        "pt-BR"
+      ],
+      "formats": [
+        "hls",
+        "mp4",
+        "iframe"
+      ],
+      "hasSettings": false,
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "playerflix",
+      "name": "PlayerFlix",
+      "description": "Filmes e séries via PlayerFlix.",
+      "version": "0.1.0",
+      "filename": "providers/playerflix.js",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "enabled": true,
+      "contentLanguage": [
+        "pt-BR"
+      ],
+      "formats": [
+        "hls",
+        "mp4",
+        "iframe"
+      ],
+      "hasSettings": false,
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "embedtv",
+      "name": "EmbedTV",
+      "description": "Canais e eventos via EmbedTV.",
+      "version": "0.1.0",
+      "filename": "providers/embedtv.js",
+      "supportedTypes": [
+        "tv"
+      ],
+      "enabled": true,
+      "contentLanguage": [
+        "pt-BR"
+      ],
+      "formats": [
+        "hls",
+        "mp4",
+        "iframe"
+      ],
+      "hasSettings": false,
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "embedcanais",
+      "name": "Embed Canais",
+      "description": "Canais via Embed Canais.",
+      "version": "0.1.0",
+      "filename": "providers/embedcanais.js",
+      "supportedTypes": [
+        "tv"
+      ],
+      "enabled": true,
+      "contentLanguage": [
+        "pt-BR"
+      ],
+      "formats": [
+        "hls",
+        "mp4",
+        "iframe"
+      ],
+      "hasSettings": false,
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "reiemb",
+      "name": "Rei Emb",
+      "description": "Canais e streams via Rei Emb.",
+      "version": "0.1.0",
+      "filename": "providers/reiemb.js",
+      "supportedTypes": [
+        "tv"
+      ],
+      "enabled": true,
+      "contentLanguage": [
+        "pt-BR"
+      ],
+      "formats": [
+        "hls",
+        "mp4",
+        "iframe"
+      ],
+      "hasSettings": false,
       "supportsExternalPlayer": true
     }
   ]
