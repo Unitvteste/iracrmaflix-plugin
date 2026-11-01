@@ -15,6 +15,10 @@ function normalizeType(value) {
   return String(value || '').toLowerCase() === 'movie' ? 'movie' : 'series';
 }
 
+function isLiveId(value) {
+  return /^(?:iracematv_|iracematv[-_]|m3u-|xtream-|channel-|event-)/i.test(String(value || '').trim());
+}
+
 function normalizeStreams(payload) {
   const raw = Array.isArray(payload) ? payload : Array.isArray(payload?.streams) ? payload.streams : [];
   const seen = new Set();
@@ -46,7 +50,8 @@ async function getStreams(tmdbId, mediaType, season, episode, options) {
   const base = backendUrl(options);
   const id = encodeURIComponent(String(tmdbId || '').trim());
   if (!base || !id) return [];
-  const type = normalizeType(mediaType);
+  const live = String(mediaType || '').toLowerCase() === 'tv' && isLiveId(tmdbId) && season == null && episode == null;
+  const type = live ? 'tv' : normalizeType(mediaType);
   const suffix = type === 'series'
     ? `/${encodeURIComponent(String(season || 1))}/${encodeURIComponent(String(episode || 1))}`
     : '';
