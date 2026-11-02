@@ -53,6 +53,31 @@ async function api(action, value, extra = {}, source = null) {
     return await r.json();
   } catch (_) { return null; }
 }
+async function cinemeta(id, mediaType) {
+  if (!/^tt\d+$/i.test(text(id))) return { title: text(id), year: '' };
+  try {
+    const kind = String(mediaType).toLowerCase() === 'movie' ? 'movie' : 'series';
+    const r = await fetch(`https://v3-cinemeta.strem.io/meta/${kind}/${encodeURIComponent(id)}.json`, { headers: { accept: 'application/json' } });
+    const m = r.ok ? (await r.json()).meta || {} : {};
+    return { title: text(m.name || m.originalName), year: text(m.year || m.releaseInfo).slice(0, 4), meta: m };
+  } catch (_) { return { title: '', year: '' }; }
+}
+function sameTitle(a, b) {
+  const norm = x => text(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const left = norm(a), right = norm(b); return Boolean(left && right && (left === right || left.includes(right) || right.includes(left)));
+}
+async function findMovie(source, info, value) {
+  const rows = await api('get_vod_streams', value, {}, source);
+  return (Array.isArray(rows) ? rows : []).find(x => sameTitle(x.name || x.title, info.title) && (!info.year || !x.year || String(x.year).includes(info.year)));
+}
+async function findEpisode(source, info, season, episode, value) {
+  const shows = await api('get_series', value, {}, source);
+  const show = (Array.isArray(shows) ? shows : []).find(x => sameTitle(x.name || x.title, info.title));
+  if (!show) return null;
+  const data = await api('get_series_info', value, { series_id: show.series_id }, source);
+  const episodes = data?.episodes?.[String(season)] || data?.episodes?.[Number(season)] || [];
+  return (Array.isArray(episodes) ? episodes : []).find(x => Number(x.episode_num) === Number(episode));
+}
 function onSettings() {
   const out = [
     { type: 'header', label: 'Xtream — fontes múltiplas' },
@@ -80,6 +105,20 @@ async function getStreams(id, mediaType, season, episode, value) {
   const source = sourceMatch ? sources.find(x => x.id === sourceMatch[1]) : sources[0];
   const c = source || sources[0];
   const normalizedKey = sourceMatch ? `xtream-${key.slice(key.indexOf('__') + 2)}` : key;
+  if (!/^xtream-/i.test(normalizedKey)) {
+    const info = await cinemeta(key, mediaType); if (!info.title) return [];
+    const found = [];
+    for (const candidate of sources) {
+      if (String(mediaType).toLowerCase() === 'movie' && season == null && episode == null) {
+        const item = await findMovie(candidate, info, value);
+        if (item?.stream_id != null) found.push(stream(movieUrl(candidate, item.stream_id), `Xtream • ${candidate.name} • ${item.name || info.title}`, 'mp4', item, candidate.name));
+      } else if (season != null && episode != null) {
+        const item = await findEpisode(candidate, info, season, episode, value);
+        if (item?.id != null) found.push(stream(episodeUrl(candidate, item.id), `Xtream • ${candidate.name} • ${info.title} S${season}E${episode}`, 'mp4', item, candidate.name));
+      }
+    }
+    return found;
+  }
   if (season != null || episode != null) {
     const episodeId = normalizedKey.replace(/^xtream-(?:series|episode)-/i, '');
     if (!/^\d+$/.test(episodeId)) return [];
