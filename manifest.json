@@ -1,6 +1,6 @@
 {
   "name": "IracemaFlix",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "IracemaFlix — providers brasileiros de filmes, séries, animes e doramas para o Nuvio.",
   "author": "IracemaFlix",
   "logo": "https://files.catbox.moe/628bx9.png",
@@ -9,7 +9,7 @@
       "id": "berryanimes",
       "name": "Berry Animes",
       "description": "Séries de anime • Qualidade: até 1080p nos testes, conforme o episódio • Formato: HLS • Multiáudio.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/berryanimes.js",
       "logo": "https://berryanimes.com/icons/icon-192.png",
       "supportedTypes": [
@@ -31,7 +31,7 @@
       "id": "doramogo",
       "name": "Doramogo",
       "description": "Doramas e filmes asiáticos • Qualidade: automática, conforme a fonte • Formato: HLS • Legendado/dublado.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/doramogo.js",
       "logo": "https://www.doramogo.net/assets/doramogo/images/logo.png",
       "supportedTypes": [
@@ -55,7 +55,7 @@
       "id": "anistream",
       "name": "AniStream",
       "description": "Animes: séries e filmes • Qualidade: 1080p nos testes, conforme o arquivo • Formatos: MKV e MP4 • Multiáudio.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/anistream.js",
       "logo": "https://anistream.biz/icons/icon-192.png",
       "supportedTypes": [
@@ -78,7 +78,7 @@
       "id": "megaembedapi",
       "name": "MegaEmbedAPI",
       "description": "Filmes • Qualidades: 360p e 720p nos testes, conforme o título • Formato: MP4.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/megaembedapi.js",
       "supportedTypes": [
         "movie"
@@ -97,7 +97,7 @@
       "id": "embedmovies",
       "name": "EmbedMovies",
       "description": "Filmes e séries, incluindo animes • Qualidade: até 720p nos testes, conforme a fonte • Formato: HLS.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/embedmovies.js",
       "supportedTypes": [
         "movie",
@@ -117,7 +117,7 @@
       "id": "anizone",
       "name": "AniZone",
       "description": "Animes: séries e filmes • Qualidade: até 1080p nos testes, conforme o título • Formato: HLS • Multiáudio.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/anizone.js",
       "logo": "https://anizone.to/favicon-32x32.png",
       "supportedTypes": [
@@ -140,7 +140,7 @@
       "id": "amyflix",
       "name": "AmyFlix",
       "description": "Séries e filmes asiáticos/GL • Qualidade: variável, conforme o servidor • Formatos: HLS e MP4.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/amyflix.js",
       "logo": "https://i.imgur.com/7MjSuHT.png",
       "supportedTypes": [
@@ -163,7 +163,7 @@
       "id": "topanimes",
       "name": "TopAnimes",
       "description": "Séries de anime • Qualidade: variável, conforme o episódio e servidor • Formatos: HLS e MP4.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/topanimes.js",
       "logo": "https://i.imgur.com/sfcToMU.png",
       "supportedTypes": [
@@ -185,7 +185,7 @@
       "id": "superanimes",
       "name": "Super Animes",
       "description": "Animes: séries e filmes • Qualidade: variável, conforme a fonte • Formatos: HLS e MP4.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/superanimes.js",
       "logo": "https://i.imgur.com/XUfXdbk.png",
       "supportedTypes": [
@@ -208,7 +208,7 @@
       "id": "animefire",
       "name": "AnimeFire",
       "description": "Animes: séries e filmes • Qualidade: variável, conforme o episódio • Formato: HLS • Legendado/dublado.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/animefire.js",
       "logo": "https://i.imgur.com/bIt6zkA.png",
       "supportedTypes": [
@@ -230,7 +230,7 @@
       "id": "animesonlinecloud",
       "name": "Animes Online Cloud",
       "description": "Animes: séries e filmes • Qualidade: variável, conforme o servidor • Formatos: HLS e MP4.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/animesonlinecloud.js",
       "logo": "https://i.imgur.com/BjAOlx6.png",
       "supportedTypes": [
@@ -253,7 +253,7 @@
       "id": "anibunker",
       "name": "AniBunker",
       "description": "Animes: séries e filmes • Qualidade: variável, conforme o servidor • Formatos: HLS e MP4 • Legendado/dublado.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/anibunker.js",
       "logo": "https://anibunker.com/uploads/logo.png",
       "supportedTypes": [
@@ -276,7 +276,7 @@
       "id": "redeflix",
       "name": "RedeFlix API",
       "description": "Filmes, séries, animes e doramas • Qualidade: variável, conforme o título • Formatos: MP4 e HLS • Dublado/legendado.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "filename": "providers/redeflix.js",
       "logo": "https://redeflixapi.store/favicon.png",
       "supportedTypes": [
@@ -299,7 +299,7 @@
       "id": "donghuanosekai",
       "name": "Donghua no Sekai",
       "description": "Donghua e animes: séries e filmes • Qualidade: variável, conforme o servidor • Formatos: HLS e MP4.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/donghuanosekai.js",
       "logo": "https://i.imgur.com/B4nm4HJ.png",
       "supportedTypes": [
@@ -323,7 +323,7 @@
       "id": "fshd",
       "name": "FSHD",
       "description": "Filmes e séries • Provider FSHD portado do adapter Kamirama do IracemaFlix.",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "filename": "providers/fshd.js",
       "supportedTypes": [
         "movie",
@@ -355,7 +355,7 @@
         "hls",
         "mp4"
       ],
-      "version": "0.2.0",
+      "version": "0.1.0",
       "enabled": true,
       "contentLanguage": [
         "pt-BR",
@@ -367,8 +367,8 @@
     },
     {
       "id": "myembed",
-      "name": "MyEmbed / FSHD",
-      "description": "Filmes e séries • Adapter MyEmbed e FSHD portado do IracemaFlix.",
+      "name": "MyEmbed",
+      "description": "Filmes e séries via MyEmbed, separado do provider FSHD.",
       "filename": "providers/myembed.js",
       "supportedTypes": [
         "movie",
@@ -378,7 +378,7 @@
         "hls",
         "mp4"
       ],
-      "version": "0.2.0",
+      "version": "0.2.2",
       "enabled": true,
       "contentLanguage": [
         "pt-BR",
@@ -389,39 +389,20 @@
       "supportsExternalPlayer": true
     },
     {
-      "id": "iracemaflix-live",
-      "name": "IracemaFlix — Canais, M3U e Xtream",
-      "description": "Canais públicos, M3U e Xtream como provider Nuvio, com configurações locais e sem credenciais no repositório.",
-      "version": "0.2.0",
-      "filename": "providers/iracemaflix-live.js",
-      "supportedTypes": [
-        "tv"
-      ],
-      "enabled": true,
-      "contentLanguage": [
-        "pt-BR"
-      ],
-      "formats": [
-        "hls",
-        "mp4",
-        "iframe"
-      ],
-      "hasSettings": true,
-      "supportsExternalPlayer": true
-    },
-    {
-      "id": "xtream",
-      "name": "IracemaFlix — Xtream",
-      "description": "Canais ao vivo, filmes e séries Xtream com credenciais configuradas nas preferências do Nuvio.",
-      "version": "0.2.0",
-      "filename": "providers/xtream.js",
+      "id": "iracemaflix-backend",
+      "name": "IracemaFlix — Backend completo",
+      "description": "Ponte para todos os provedores do addon IracemaFlix: Kamirama, MegaEmbed, Mgeb, MyEmbed, PlayerFlix, RedeFlix, Xtream e M3U.",
+      "version": "0.1.0",
+      "filename": "providers/iracemaflix-backend.js",
       "supportedTypes": [
         "movie",
         "tv"
       ],
       "enabled": true,
       "contentLanguage": [
-        "pt-BR"
+        "pt-BR",
+        "ja",
+        "en"
       ],
       "formats": [
         "hls",
@@ -431,10 +412,56 @@
       "supportsExternalPlayer": true
     },
     {
+      "id": "iracemaflix-live",
+      "name": "IracemaFlix — Canais, M3U e Xtream",
+      "description": "Provider IracemaFlix — Canais, M3U e Xtream do IracemaFlix.",
+      "version": "0.2.2",
+      "filename": "providers/iracemaflix-live.js",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "enabled": true,
+      "contentLanguage": [
+        "pt-BR",
+        "ja",
+        "en"
+      ],
+      "formats": [
+        "hls",
+        "mp4"
+      ],
+      "hasSettings": false,
+      "supportsExternalPlayer": true
+    },
+    {
+      "id": "xtream",
+      "name": "IracemaFlix — Xtream",
+      "description": "Provider IracemaFlix — Xtream do IracemaFlix.",
+      "version": "0.2.2",
+      "filename": "providers/xtream.js",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "enabled": true,
+      "contentLanguage": [
+        "pt-BR",
+        "ja",
+        "en"
+      ],
+      "formats": [
+        "hls",
+        "mp4"
+      ],
+      "hasSettings": false,
+      "supportsExternalPlayer": true
+    },
+    {
       "id": "mgeb",
       "name": "Mgeb",
-      "description": "Filmes e séries via Mgeb.",
-      "version": "0.2.0",
+      "description": "Provider Mgeb do IracemaFlix.",
+      "version": "0.2.2",
       "filename": "providers/mgeb.js",
       "supportedTypes": [
         "movie",
@@ -442,12 +469,13 @@
       ],
       "enabled": true,
       "contentLanguage": [
-        "pt-BR"
+        "pt-BR",
+        "ja",
+        "en"
       ],
       "formats": [
         "hls",
-        "mp4",
-        "iframe"
+        "mp4"
       ],
       "hasSettings": false,
       "supportsExternalPlayer": true
@@ -455,8 +483,8 @@
     {
       "id": "playerflix",
       "name": "PlayerFlix",
-      "description": "Filmes e séries via PlayerFlix.",
-      "version": "0.2.1",
+      "description": "Provider PlayerFlix do IracemaFlix.",
+      "version": "0.2.2",
       "filename": "providers/playerflix.js",
       "supportedTypes": [
         "movie",
@@ -464,12 +492,13 @@
       ],
       "enabled": true,
       "contentLanguage": [
-        "pt-BR"
+        "pt-BR",
+        "ja",
+        "en"
       ],
       "formats": [
         "hls",
-        "mp4",
-        "iframe"
+        "mp4"
       ],
       "hasSettings": false,
       "supportsExternalPlayer": true
@@ -477,20 +506,22 @@
     {
       "id": "embedtv",
       "name": "EmbedTV",
-      "description": "Canais e eventos via EmbedTV.",
-      "version": "0.2.0",
+      "description": "Provider EmbedTV do IracemaFlix.",
+      "version": "0.2.2",
       "filename": "providers/embedtv.js",
       "supportedTypes": [
+        "movie",
         "tv"
       ],
       "enabled": true,
       "contentLanguage": [
-        "pt-BR"
+        "pt-BR",
+        "ja",
+        "en"
       ],
       "formats": [
         "hls",
-        "mp4",
-        "iframe"
+        "mp4"
       ],
       "hasSettings": false,
       "supportsExternalPlayer": true
@@ -498,20 +529,22 @@
     {
       "id": "embedcanais",
       "name": "Embed Canais",
-      "description": "Canais via Embed Canais.",
-      "version": "0.2.0",
+      "description": "Provider Embed Canais do IracemaFlix.",
+      "version": "0.2.2",
       "filename": "providers/embedcanais.js",
       "supportedTypes": [
+        "movie",
         "tv"
       ],
       "enabled": true,
       "contentLanguage": [
-        "pt-BR"
+        "pt-BR",
+        "ja",
+        "en"
       ],
       "formats": [
         "hls",
-        "mp4",
-        "iframe"
+        "mp4"
       ],
       "hasSettings": false,
       "supportsExternalPlayer": true
@@ -519,20 +552,22 @@
     {
       "id": "reiemb",
       "name": "Rei Emb",
-      "description": "Canais e streams via Rei Emb.",
-      "version": "0.2.0",
+      "description": "Provider Rei Emb do IracemaFlix.",
+      "version": "0.2.2",
       "filename": "providers/reiemb.js",
       "supportedTypes": [
+        "movie",
         "tv"
       ],
       "enabled": true,
       "contentLanguage": [
-        "pt-BR"
+        "pt-BR",
+        "ja",
+        "en"
       ],
       "formats": [
         "hls",
-        "mp4",
-        "iframe"
+        "mp4"
       ],
       "hasSettings": false,
       "supportsExternalPlayer": true
