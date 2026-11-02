@@ -1,6 +1,6 @@
 {
   "name": "IracemaFlix",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "IracemaFlix — providers brasileiros de filmes, séries, animes e doramas para o Nuvio.",
   "author": "IracemaFlix",
   "logo": "https://files.catbox.moe/628bx9.png",
@@ -276,7 +276,7 @@
       "id": "redeflix",
       "name": "RedeFlix API",
       "description": "Filmes, séries, animes e doramas • Qualidade: variável, conforme o título • Formatos: MP4 e HLS • Dublado/legendado.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "filename": "providers/redeflix.js",
       "logo": "https://redeflixapi.store/favicon.png",
       "supportedTypes": [
@@ -456,7 +456,7 @@
       "id": "playerflix",
       "name": "PlayerFlix",
       "description": "Filmes e séries via PlayerFlix.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "filename": "providers/playerflix.js",
       "supportedTypes": [
         "movie",
