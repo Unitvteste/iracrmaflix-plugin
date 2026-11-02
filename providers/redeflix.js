@@ -26,7 +26,21 @@ async function __iracemaDecorateRedeflix(streams, id, type, season, episode) {
     return { ...stream, provider: 'RedeFlix API', sourceName: 'RedeFlix', quality, language, name, title: [`🎬 Título: ${title}${year ? ` (${year})` : ''}`, `🎭 Gênero: ${genres}`, ep, `🖥️ Servidor: ${server}`, `✨ Qualidade: ${quality || 'Automática'}`, `🔊 Áudio: ${language}`].filter(Boolean).join('\n') };
   });
 }
+async function __iracemaResolveRedeflixId(id, type) {
+  if (/^\d+$/.test(String(id || ''))) return String(id);
+  const imdb = String(id || '').match(/^(tt\d+)/i)?.[1];
+  if (!imdb) return '';
+  try {
+    const kind = type === 'movie' ? 'movie' : 'series';
+    const response = await fetch(`https://v3-cinemeta.strem.io/meta/${kind}/${imdb}.json`);
+    const meta = response.ok ? ((await response.json()).meta || {}) : {};
+    return String(meta.tmdb_id || meta.id || '').match(/\d+/)?.[0] || '';
+  } catch (_) { return ''; }
+}
 module.exports.getStreams = async function(id, type, season, episode, value) {
-  const raw = await __iracemaRedeflixGetStreams(id, type, season, episode, value);
-  return __iracemaDecorateRedeflix(raw, id, type, season, episode);
+  const normalizedType = type === 'tv' ? 'series' : type;
+  const tmdbId = await __iracemaResolveRedeflixId(id, normalizedType);
+  if (!tmdbId) return [];
+  const raw = await __iracemaRedeflixGetStreams(tmdbId, normalizedType, season, episode, value);
+  return __iracemaDecorateRedeflix(raw, id, normalizedType, season, episode);
 };

@@ -10,7 +10,7 @@ function getStreams(tmdbId,mediaType,season,episode){
   if(mediaType==='movie'){
     try{return Promise.resolve(_megaGS(tmdbId,mediaType,season,episode)).catch(function(){return [];});}catch(e){return Promise.resolve([]);}
   }
-  return _fshdGS(tmdbId,mediaType,season,episode);
+  try{return Promise.resolve(_megaGS(tmdbId,mediaType,season,episode)).catch(function(){return [];});}catch(e){return Promise.resolve([]);}
 }
 _gt.getStreams=getStreams;
 if(typeof module!=='undefined'&&module&&module.exports){module.exports={getStreams:getStreams};}
